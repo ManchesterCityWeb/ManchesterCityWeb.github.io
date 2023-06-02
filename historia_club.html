@@ -49,6 +49,23 @@
       margin: 10px;
       border-radius: 5px;
     }
+
+    .button {
+      padding: 10px 20px;
+      background-color: #0066ff;
+      color: #fff;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+      font-weight: bold;
+      transform: translateZ(0);
+      transition-duration: 0.3s;
+      transition-property: transform;
+    }
+
+    .button:hover {
+      transform: translateY(-2px);
+    }
   </style>
 </head>
 <body>
@@ -75,9 +92,9 @@ El club juega sus partidos como local en el Etihad Stadium, ubicado en el este d
 
     <div class="section">
       <h2>Jugadores que marcaron al Manchester City</h2>
-       <p>Sergio Agüero | 2011-2021.</p>
-       <p>Colin Bell | 1966-1979.</p>
-       <p>David Silva | 2010-2020</p>
+      <p>Sergio Agüero | 2011-2021.</p>
+      <p>Colin Bell | 1966-1979.</p>
+      <p>David Silva | 2010-2020</p>
       <div class="image-gallery">
         <img src="jugador1.jpg" alt="Jugador 1">
         <img src="jugador2.jpg" alt="Jugador 2">
@@ -107,9 +124,19 @@ El club juega sus partidos como local en el Etihad Stadium, ubicado en el este d
       <h2>Dueños</h2>
       <p>Aquí puedes mostrar imágenes de los propietarios que ha tenido el Manchester City.</p>
       <div class="image-gallery">
-        <img src="dueño1.jpg" alt="Dueño 1"
+        <img src="dueño1.jpg" alt="Dueño 1">
       </div>
     </div>
+
+    <div style="text-align: center;">
+      <button class="button" onclick="redirectToIndex()">Regresar a Index</button>
+    </div>
   </div>
+
+  <script>
+    function redirectToIndex() {
+      window.location.href = "index.html";
+    }
+  </script>
 </body>
 </html>
