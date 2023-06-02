@@ -1,0 +1,167 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Proyecto de Universidad</title>
+  <style>
+    /* Estilos CSS para personalizar la apariencia de la página */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #6cb4d1; /* Color de fondo celeste */
+      margin: 0;
+      padding: 0;
+    }
+    .thankyou-container {
+      max-width: 400px;
+      margin: 100px auto;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+    .thankyou-title {
+      margin-bottom: 20px;
+    }
+    .falling-text {
+      font-size: 24px;
+      color: #000; /* Color de texto negro */
+      position: relative;
+      animation: fall 5s linear;
+    }
+    .falling-names {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .falling-names span {
+      font-size: 18px;
+      color: #000; /* Color de texto negro */
+      opacity: 0;
+      animation-duration: 2s;
+      animation-fill-mode: forwards;
+      animation-timing-function: ease-in;
+    }
+    .name:nth-child(1) {
+      animation-name: fade-in-top;
+    }
+    .name:nth-child(2) {
+      animation-name: fade-in-bottom;
+    }
+    .name:nth-child(3) {
+      animation-name: fade-in-left;
+    }
+    .name:nth-child(4) {
+      animation-name: fade-in-right;
+    }
+    .name:nth-child(5) {
+      animation-name: fade-in-center;
+    }
+    @keyframes fall {
+      0% {
+        transform: translateY(-200px);
+        opacity: 0;
+      }
+      100% {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+    @keyframes fade-in-top {
+      0% {
+        transform: translateY(-50px);
+        opacity: 0;
+      }
+      100% {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+    @keyframes fade-in-bottom {
+      0% {
+        transform: translateY(50px);
+        opacity: 0;
+      }
+      100% {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+    @keyframes fade-in-left {
+      0% {
+        transform: translateX(-50px);
+        opacity: 0;
+      }
+      100% {
+        transform: translateX(0);
+        opacity: 1;
+      }
+    }
+    @keyframes fade-in-right {
+      0% {
+        transform: translateX(50px);
+        opacity: 0;
+      }
+      100% {
+        transform: translateX(0);
+        opacity: 1;
+      }
+    }
+    @keyframes fade-in-center {
+      0% {
+        transform: scale(0);
+        opacity: 0;
+      }
+      100% {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="thankyou-container">
+    <div class="thankyou-title">
+      <h2>¡Gracias por ver esta página y nuestro proyecto!</h2>
+    </div>
+    <div class="falling-text">
+      Miembros del proyecto
+    </div>
+    <div class="falling-names">
+      <span class="name">Larson Yardel</span>
+      <span class="name">Emir Gutierrez</span>
+      <span class="name">Edgar</span>
+      <span class="name">Danny</span>
+      <span class="name">Alexander</span>
+    </div>
+  </div>
+  <audio autoplay>
+    <source src="rickroll.mp3" type="audio/mp3">
+    Tu navegador no soporta la reproducción de audio.
+  </audio>
+  <script>
+    // Obtener los nombres
+    const names = document.querySelectorAll('.name');
+
+    // Asignar diferentes animaciones de entrada a cada nombre
+    names.forEach((name, index) => {
+      name.style.animationDelay = `${index * 0.5}s`; // Retraso creciente para cada nombre
+    });
+
+    // Detener la animación del texto cuando alcanza la parte inferior
+    const fallingText = document.querySelector('.falling-text');
+    fallingText.addEventListener('animationend', () => {
+      fallingText.style.animation = 'none'; // Detener la animación
+    });
+
+    // Habilitar la reproducción automática del audio
+    const audio = document.querySelector('audio');
+    audio.autoplay = true;
+    audio.muted = false;
+  </script>
+</body>
+</html>
+
+
+
+

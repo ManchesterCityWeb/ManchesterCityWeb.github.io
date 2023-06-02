@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Iniciar sesión</title>
+  <style>
+    /* Estilos CSS para personalizar la apariencia de la página */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      margin: 0;
+      padding: 0;
+    }
+    .login-container {
+      max-width: 400px;
+      margin: 100px auto;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    .login-title {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .login-form {
+      display: flex;
+      flex-direction: column;
+    }
+    .login-form input {
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+    }
+    .login-form button {
+      padding: 10px;
+      background-color: #6cb4d1;
+      color: #fff;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+    }
+    .login-logo {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .login-logo img {
+      max-width: 150px;
+      height: auto;
+    }
+    .login-members {
+      text-align: center;
+      margin-top: 20px;
+    }
+    .login-back-button {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+    }
+    .login-back-button button {
+      padding: 10px 20px;
+      background-color: #ccc;
+      color: #fff;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+      font-weight: bold;
+      transform: translateZ(0);
+      transition-duration: 0.3s;
+      transition-property: transform;
+    }
+    .login-back-button button:hover {
+      transform: translateY(-2px);
+    }
+  </style>
+</head>
+<body>
+  <div class="login-container">
+    <div class="login-logo">
+      <img src="logo_manchester_city.png" alt="Logo del Manchester City">
+    </div>
+    <div class="login-title">
+      <h2>Iniciar sesión</h2>
+    </div>
+    <div class="login-form">
+      <input id="usernameInput" type="text" placeholder="Usuario" value="Detroit1945">
+      <input id="passwordInput" type="password" placeholder="Contraseña" value="HaalandXD">
+      <button onclick="login()">Iniciar sesión</button>
+    </div>
+    <div class="login-members">
+      <a href="members.html">Miembros de la página</a>
+    </div>
+    <div class="login-back-button">
+      <button onclick="window.location.href = 'index.html'">Volver a la página principal</button>
+    </div>
+  </div>
+
+  <script>
+    function login() {
+      var username = document.getElementById("usernameInput").value;
+      var password = document.getElementById("passwordInput").value;
+
+      if (username === "Detroit1945" && password === "HaalandXD") {
+        // Inicio de sesión exitoso, redireccionar a la página de proyecto_de_universidad.html
+        window.location.href = 'proyecto_de_universidad.html';
+      } else {
+        // Mostrar ventana emergente de error
+        alert("Error: Usuario no encontrado");
+      }
+    }
+  </script>
+</body>
+</html>
+
+
+
+
