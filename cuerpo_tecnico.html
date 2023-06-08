@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Cuerpo Técnico del Manchester City</title>
+  <style>
+    /* Estilos CSS para personalizar la apariencia de la página */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #e0ffff;
+      margin: 0;
+      padding: 0;
+    }
+
+    .header {
+      background-color: #fff;
+      padding: 20px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .header h1 {
+      color: #0000cd;
+      font-family: "Arial Black", sans-serif;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+      text-align: center;
+    }
+
+    .header .logo {
+      float: left;
+      width: 70px;
+      margin-right: 20px;
+    }
+
+    .content {
+      padding: 20px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .content h2 {
+      color: #0000cd;
+      font-family: "Arial Black", sans-serif;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    }
+
+    .content img {
+      display: block;
+      margin: 20px auto;
+      position: relative;
+      cursor: pointer;
+    }
+
+    .content .animation-text {
+      opacity: 0;
+      animation: typing 4s ease-in-out forwards;
+    }
+
+    @keyframes typing {
+      0% {
+        opacity: 0;
+      }
+      50% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+
+    .video-container {
+      position: relative;
+      width: 100%;
+      height: 400px;
+      margin: 20px 0;
+    }
+
+    .video-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    .footer {
+      text-align: right;
+      padding: 20px;
+    }
+
+    .footer button {
+      background-color: #0000cd;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <img class="logo" src="logocity.png" alt="Logo del Manchester City">
+    <h1>Cuerpo Técnico del Manchester City</h1>
+    <button onclick="redirectToIndex()">Regresar al Inicio</button>
+  </div>
+
+  <div class="content">
+    <h2>Pep Guardiola - Director Técnico</h2>
+    <img src="pep_guardiola.jpg" alt="Pep Guardiola" onmouseover="showTextAnimation()">
+    <div class="animation-text">
+      <p>Pep Guardiola entró en el podio de los entrenadores más laureados de todos los tiempos en 2023 con 34 títulos, ocupa la segunda posición.</p>
+      <p>Mircea Lucescu es el tercero de esta lista. Su paso por Dinamo Bucarest, Brescia, Rapid Bucarest, Galatasaray, Shakhtar Donetsk, Zenit y Dynamo Kiev, curiosamente el club donde Lobanovski forjó su leyenda, se traducen en 33 títulos. Una carrera que sigue en curso.</p>
+      <p>En lo más alto del cajón está sir Alex Ferguson con 49 títulos, entre el St. Mirren y Aberdeen suman once, más los 38 trofeos nacionales e internacionales con el Manchester United.</p>
+    </div>
+  </div>
+
+  <div class="video-container">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/fQklLMbYmPw?autoplay=1" frameborder="0" allowfullscreen></iframe>
+  </div>
+
+  <div class="footer">
+    <button onclick="redirectToIndex()">Regresar al Inicio</button>
+  </div>
+
+  <script>
+    function redirectToIndex() {
+      window.location.href = "index.html";
+    }
+
+    function showTextAnimation() {
+      const animationText = document.querySelector(".animation-text");
+      animationText.style.opacity = 1;
+    }
+  </script>
+</body>
+</html>
+
+
+
